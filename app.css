@@ -1,0 +1,84 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: black;
+	color: #fcecdd;
+	font-family: "Revalia", cursive;
+	font-size: 16px;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: minmax(20px, auto);
+	padding: 0 30px 30px 30px;
+	grid-template-areas:
+		"hd"
+		"fc"
+		"ct";
+}
+
+button {
+	font-family: "Bangers", cursive;
+	font-size: 16px;
+	line-height: 42px;
+	background-color: #810000;
+	color: #fcecdd;
+	padding: 0px 10px;
+}
+
+.headings {
+	grid-area: hd;
+	border: 2px solid blue;
+	margin-bottom: 10px;
+}
+
+.form_container {
+	display: flex;
+	flex-flow: column wrap;
+	grid-area: fc;
+	border: 2px solid orangered;
+}
+
+.meme_style {
+	grid-area: ct;
+	position: relative;
+	display: inline-block;
+	border: 2px solid yellow;
+}
+
+.text_top {
+	position: absolute;
+	top: 0;
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+.text_bottom {
+	position: absolute;
+	bottom: 0;
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+/* section {
+	grid-area: st;
+	border: 2px solid green;
+} */
+
+@media (min-width: 900px) {
+	.container {
+		width: 50%;
+		margin: auto;
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: minmax(20px, auto);
+		justify-content: center;
+	}
+}
